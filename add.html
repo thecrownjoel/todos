@@ -5,7 +5,7 @@
     <form>
         <div>
             <label>Enter your todo</label>
-            <input autofocus />
+            <input id="inp" autofocus />
         </div>
         <button type="submit">Add</button>
     </form>
@@ -13,7 +13,6 @@
 
 <script>
     document.querySelector('form').addEventListener('submit', (event) => {
-        alert(document.querySelector('button'));
         event.preventDefault();
 
         debugger;
