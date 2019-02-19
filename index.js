@@ -39,6 +39,10 @@ const menuTemplate = [
                 label: 'New Todo',
                 click() { createAddWindow(); } 
             },
+            { 
+                label: 'Clear Todo',
+                click() {  } 
+            },
             {
                 label: 'Quit',
                 accelerator: process.platform == 'darwin' ? 'Command+Q' : 'Ctrl+Q',
