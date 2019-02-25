@@ -24,6 +24,7 @@ function createAddWindow() {
     addWindow.on('closed', () => addWindow = null);
 }
 
+
 // Listen for the Add todo event
 ipcMain.on('todo:add', (event, todo) => {
     mainWindow.webContents.send('todo:add', todo);
@@ -41,7 +42,11 @@ const menuTemplate = [
             },
             { 
                 label: 'Clear Todo',
-                click() {  } 
+                click() {  
+                    mainWindow.webContents.send('todo:clear', () => {
+                       console.log('clear todo'); 
+                    })
+                } 
             },
             {
                 label: 'Quit',
